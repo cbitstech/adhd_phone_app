@@ -31,6 +31,10 @@ angular
         templateUrl: 'views/survey.html',
         controller: 'SurveyCtrl'
       })
+      .when('/finish', {
+        templateUrl: 'views/finish.html',
+        controller: 'FinishCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -12,6 +12,8 @@ angular.module('adhdApp')
     $scope.appName = "Field Assessment Tool";
     $scope.submitButtonLabel = "Begin!";
 
+    
+
     $scope.startAssessment = function(){
 
     	localStorage['userId'] = $("#userId").val();
@@ -19,5 +21,7 @@ angular.module('adhdApp')
 
 
     }
+
+
 
   });

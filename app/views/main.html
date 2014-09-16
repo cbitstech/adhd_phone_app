@@ -7,7 +7,7 @@
 <form ng-submit="startAssessment()">
   
 <br/>
-<input type="text" name="userID" placeholder="Enter your User ID" id="userID" required="required">
+<input type="text" name="userID" placeholder="Enter your User ID" id="userId" required="required">
 <br/><br/>
 <button type="submit" ng-bind-html="submitButtonLabel" class="btn btn-primary"></button>
 
@@ -17,7 +17,7 @@
 
 <div ng-controller="FetchContentCtrl">
 	<button ng-click="fetchContent()" class="btn btn-warning" ng-bind-html="questionUpdateLabel"></button>
-
+	<br/>{{lastUpdated}}
 	<div id="update-summary">
 		<div ng-repeat="item in summary">{{item.label}</div>
 	</div>

@@ -1,0 +1,19 @@
+<form>
+	<div ng-repeat="question in questionGroups" class="question-group" data-idx="{{$index}}" ng-show='showQuestion({{$index}})' >
+	<label class="content-label"> 
+		<!-- DECIDE ON HOW TO HANDLE QUESTION NUMBERS LATER -->
+		<!-- <span class="question-number">{{$index+1}}</span>  -->
+	  <div ng-switch on="questionViewType(question.type)">
+        <div ng-switch-when="multiple">
+        		<div ng-include="'views/questionGroups/multiple.html'"></div>
+        </div>
+        <div ng-switch-when="single">
+        		<div ng-include="'views/questionGroups/single.html'"></div>
+        </div>
+        <div ng-switch-default>
+        	<div ng-include="'views/questionGroups/html.html'"></div>
+        </div>
+    </div>
+	  <div ng-include="'views/questionGroups/nav.html'"></div>
+    </div>
+</form>

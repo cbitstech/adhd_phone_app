@@ -1,0 +1,14 @@
+<div ng-include="'views/questionGroups/title.html'"></div>
+
+<div class="response-group">
+
+	  <div ng-switch on="question.type">
+	  	  <div ng-switch-when="textarea">
+				<textarea name="{{question.questionDataLabel}}"></textarea>	
+				</div>
+	  	  <div ng-switch-default>
+				<input type="{{question.type}}" name="{{question.questionDataLabel}}">	
+				</div>
+
+		</div>
+</div>

@@ -1,0 +1,8 @@
+<div ng-include="'views/questionGroups/title.html'"></div>
+
+<div class="response-group">
+	<label for="q{{question.questionDataLabel}}{{response.value}}" ng-repeat="response in question.responses" class="btn btn-info wide response-label">
+		<input type="{{question.type}}" name="{{question.questionDataLabel}}" id="q{{question.questionDataLabel}}{{response.value}}" value="{{response.value}}"> 
+		{{response.label}} 
+	</label>
+</div>

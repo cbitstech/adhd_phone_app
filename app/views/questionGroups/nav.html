@@ -1,0 +1,9 @@
+<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="navbar-left">
+		<button class="btn btn-warning" ng-click='back()' ng-if="$index != 0" ng-bind-html="label('back')"></button>
+	</div>
+	<div class="navbar-right">
+		<button class="btn btn-warning" ng-click='next()' ng-if="$index != numberOfQuestions -1" ng-bind-html="label('next')"></button>
+	<button type="submit" class="btn btn-warning" ng-click='submit()' ng-if="$index == numberOfQuestions - 1" ng-bind-html="label('submit')"></button>
+	</div>
+</nav>
